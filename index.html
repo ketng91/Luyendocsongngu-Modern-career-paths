@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bài đọc song ngữ</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #ffd6ba;
+  padding: 15px;
+  color: #7a4e3e;
+}
+
+.header-left {
+  position: absolute;
+  left: 15px;
+}
+
+.header-left a {
+  text-decoration: none;
+  color: #7a4e3e;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-left a:hover {
+  color: #ff6b6b;
+}
+
+.header-center {
+  font-size: 26px;
+  text-align: center;
+}
+
+body {
+  font-family: Arial;
+  background-color: #fff8f0;
+  margin: 0;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  background-color: #ffd6ba;
+  padding: 15px;
+  color: #7a4e3e;
+}
+
+.header-center {
+  font-size: 28px;
+}
+
+/* BUTTON */
+.controls {
+  margin: 20px;
+}
+
+button {
+  padding: 10px 16px;
+  margin: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #a0e7e5;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffb3ba;
+}
+
+/* CONTENT */
+.container {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  font-size: 22px;
+}
+
+.pair {
+  margin-bottom: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pair.active {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: scale(1.02);
+}
+
+/* EN */
+.en {
+  background: #d8f3dc;
+  padding: 12px;
+}
+
+/* VI */
+.vi {
+  background: #e3fdfd;
+  padding: 12px;
+  font-style: italic;
+  display: none;
+}
+
+/* footer */
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fff0e1;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-left">
+    <a href="https://ketng91.github.io/TuvungTHPTQG-homepage/">
+      <i class="fa-solid fa-house"></i> Home
+    </a>
+  </div>
+
+  <div class="header-center">
+    LUYỆN ĐỌC DỊCH - BÀI ĐỌC 01 – ĐỀ 02 – Kim Sơn A
+  </div>
+</header>
+
+<div class="controls">
+  <button onclick="autoPlay()">▶ Auto đọc</button>
+  <button onclick="stopAuto()">⏹ Dừng</button>
+
+<button onclick="toggleAllVI()" id="toggleBtn">Hiện bản dịch</button>
+</div>
+
+<div class="container">
+
+  <div class="pair" onclick="toggleVI(this)">
+    <div class="en">In a world increasingly shaped by technological advancement, the concept of a "career path" has evolved dramatically.</div>
+    <div class="vi">(Trong một thế giới ngày càng được định hình bởi tiến bộ công nghệ, khái niệm “lộ trình nghề nghiệp” đã thay đổi một cách mạnh mẽ.)</div>
+  </div>
+
+  <div class="pair" onclick="toggleVI(this)">
+    <div class="en">Traditionally, a career path was seen as a linear progression within a single industry or profession.</div>
+    <div class="vi">(Theo truyền thống, lộ trình nghề nghiệp được xem là một quá trình phát triển tuyến tính trong một ngành hoặc một nghề duy nhất.)</div>
+  </div>
+
+  <div class="pair" onclick="toggleVI(this)">
+    <div class="en">Today, however, it is often nonlinear and characterized by multiple shifts across fields.</div>
+    <div class="vi">(Tuy nhiên, ngày nay, nó thường không còn tuyến tính mà được đặc trưng bởi nhiều lần chuyển đổi giữa các lĩnh vực.)</div>
+  </div>
+
+  <div class="pair" onclick="toggleVI(this)">
+    <div class="en">This shift has been driven by globalization, automation, and the rise of the gig economy.</div>
+    <div class="vi">(Sự thay đổi này được thúc đẩy bởi toàn cầu hóa, tự động hóa và sự phát triển của nền kinh tế việc làm tự do.)</div>
+  </div>
+
+  <div class="pair" onclick="toggleVI(this)">
+    <div class="en">For instance, a professional may start as an engineer, transition into data analysis, and later become a consultant.</div>
+    <div class="vi">(Ví dụ, một người có thể bắt đầu là kỹ sư, sau đó chuyển sang phân tích dữ liệu và cuối cùng trở thành tư vấn viên.)</div>
+  </div>
+
+  <div class="pair" onclick="toggleVI(this)">
+    <div class="en">One of the key challenges of navigating modern career paths is dealing with uncertainty.</div>
+    <div class="vi">(Một trong những thách thức chính khi định hướng lộ trình nghề nghiệp hiện đại là đối mặt với sự bất định.)</div>
+  </div>
+
+  <div class="pair" onclick="toggleVI(this)">
+    <div class="en">Unlike in the past, when long-term employment in one organization was common, today’s workforce must be prepared to continually upskill and reskill to increase their adaptability.</div>
+    <div class="vi">(Khác với trước đây khi làm việc lâu dài tại một tổ chức là điều phổ biến, lực lượng lao động ngày nay phải sẵn sàng liên tục nâng cao và học lại kỹ năng để tăng khả năng thích ứng.)</div>
+  </div>
+
+  <div class="pair" onclick="toggleVI(this)">
+    <div class="en">According to a report by the World Economic Forum, nearly half of all employees will need significant retraining by 2030 due to advancements in artificial intelligence and automation.</div>
+    <div class="vi">(Theo như một báo cáo của Diễn đàn Kinh tế Thế giới, gần một nửa lực lượng lao động sẽ cần được đào tạo lại đáng kể vào năm 2030 do sự phát triển của trí tuệ nhân tạo và tự động hóa.)</div>
+  </div>
+
+  <div class="pair" onclick="toggleVI(this)">
+    <div class="en">This has given rise to the concept of "lifelong learning," where individuals proactively pursue education and training throughout their lives.</div>
+    <div class="vi">(Điều này đã làm xuất hiện khái niệm “học tập suốt đời”, trong đó mỗi cá nhân chủ động theo đuổi việc học và đào tạo trong suốt cuộc đời.)</div>
+  </div>
+
+  <div class="pair" onclick="toggleVI(this)">
+    <div class="en">Another emerging trend is the emphasis on purpose-driven careers.</div>
+    <div class="vi">(Một xu hướng mới nổi khác là sự chú trọng vào các nghề nghiệp định hướng bởi mục đích.)</div>
+  </div>
+
+  <div class="pair" onclick="toggleVI(this)">
+    <div class="en">Younger generations, particularly millennials and Gen Z, increasingly prioritize roles that match their values and contribute to societal or environmental change.</div>
+    <div class="vi">(Các thế hệ trẻ, đặc biệt là Millennials và Gen Z, ngày càng ưu tiên những công việc phù hợp với giá trị của họ và góp phần tạo ra thay đổi xã hội hoặc môi trường.)</div>
+  </div>
+
+  <div class="pair" onclick="toggleVI(this)">
+    <div class="en">For example, careers in renewable energy, non-profit organizations, and social entrepreneurship are gaining popularity.</div>
+    <div class="vi">(Ví dụ, các nghề trong lĩnh vực năng lượng tái tạo, tổ chức phi lợi nhuận và khởi nghiệp xã hội đang ngày càng phổ biến.)</div>
+  </div>
+
+  <div class="pair" onclick="toggleVI(this)">
+    <div class="en">However, chasing a meaningful goal often requires sacrifices, such as accepting lower starting salaries or taking non-traditional career paths.</div>
+    <div class="vi">(Tuy nhiên, theo đuổi một mục tiêu ý nghĩa thường đòi hỏi sự hy sinh, chẳng hạn như chấp nhận mức lương khởi điểm thấp hơn hoặc lựa chọn những con đường nghề nghiệp không truyền thống.)</div>
+  </div>
+
+  <div class="pair" onclick="toggleVI(this)">
+    <div class="en">Despite the challenges, modern career paths offer unparalleled opportunities for personal and professional growth.</div>
+    <div class="vi">(Mặc dù có nhiều thách thức, các lộ trình nghề nghiệp hiện đại mang lại những cơ hội phát triển cá nhân và nghề nghiệp chưa từng có.)</div>
+  </div>
+
+  <div class="pair" onclick="toggleVI(this)">
+    <div class="en">With the right attitude and resources, people can build careers that are rewarding and flexible in a fast-changing world.</div>
+    <div class="vi">(Với thái độ và nguồn lực phù hợp, mọi người có thể xây dựng sự nghiệp vừa ý nghĩa vừa linh hoạt trong một thế giới thay đổi nhanh chóng.)</div>
+  </div>
+
+</div>
+
+<footer>© Lớp Anh thầy Kết</footer>
+
+<script>
+let showAll = false;
+
+function toggleAllVI() {
+  const viList = document.querySelectorAll('.vi');
+  const btn = document.getElementById('toggleBtn');
+
+  showAll = !showAll;
+
+  viList.forEach(v => {
+    v.style.display = showAll ? 'block' : 'none';
+  });
+
+  btn.innerText = showAll ? 'Ẩn bản dịch' : 'Hiện bản dịch';
+}
+
+/* ===== TOGGLE DỊCH TỪNG CÂU ===== */
+function toggleVI(el) {
+  const vi = el.querySelector('.vi');
+  vi.style.display = (vi.style.display === 'block') ? 'none' : 'block';
+}
+
+/* ===== SPEECH ===== */
+function speak(text) {
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.lang = 'en-US';
+  utter.rate = 0.9;
+  speechSynthesis.speak(utter);
+}
+
+/* DOUBLE CLICK ĐỂ NGHE */
+document.querySelectorAll('.pair').forEach(pair => {
+  pair.addEventListener('dblclick', () => {
+    const text = pair.querySelector('.en').innerText;
+    speechSynthesis.cancel();
+    speak(text);
+  });
+});
+
+/* ===== AUTO ĐỌC ===== */
+let index = 0;
+let interval;
+
+function autoPlay() {
+  const pairs = document.querySelectorAll('.pair');
+  index = 0;
+
+  speechSynthesis.cancel();
+
+  interval = setInterval(() => {
+    if (index >= pairs.length) {
+      clearInterval(interval);
+      return;
+    }
+
+    const text = pairs[index].querySelector('.en').innerText;
+    speak(text);
+
+    index++;
+  }, 3500);
+}
+
+function stopAuto() {
+  clearInterval(interval);
+  speechSynthesis.cancel();
+}
+</script>
+
+</body>
+</html>
